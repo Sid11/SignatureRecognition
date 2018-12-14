@@ -1,0 +1,23 @@
+<html>
+<head>
+    <link href="/static/css/uploadCard.css" rel="stylesheet">
+</head>
+<body>
+
+<h2>Multiple Images Upload</h2>
+
+<div class="card">
+  <img src="/static/images/upload.png" alt="Avatar" style="width:300px;height:300px;">
+  <div class="container">
+    <h4><b>Browse your files</b></h4>
+      <form method="post" action="../upload/" enctype="multipart/form-data">{% csrf_token %}
+    <input type="file" name="files" multiple/>
+    <input type="submit" value="Upload"/>
+    </form>
+  </div>
+</div>
+
+
+
+</body>
+</html>

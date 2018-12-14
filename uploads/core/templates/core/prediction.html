@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction</title>
+        <link href="/static/css/predictCards.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="row">
+        {% for image,label in images %}
+          <div class="column">
+            <div class="card">
+              <img src="{{ image }}" height="200px" width="90%">
+              <h1>{{ label }}</h1>
+              <p>Genuine or Forged</p>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+
+<a href="{% url 'export_users_csv' %}">Export all users</a>
+
+</body>
+</html>
